@@ -1,0 +1,14 @@
+public class Ejercicio2 {
+    public static int calcularBuses(int sillas, int gordos, int flacos) {
+        int sillasNecesarias = gordos * 2 + flacos;
+        return (int) Math.ceil((double) sillasNecesarias / sillas);
+    }
+
+    public static void main(String[] args) {
+        int sillas = 50;
+        int gordos = 20;
+        int flacos = 40;
+        int buses = calcularBuses(sillas, gordos, flacos);
+        System.out.println("Número de buses necesarios: " + buses);
+    }
+}
