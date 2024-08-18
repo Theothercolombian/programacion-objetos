@@ -1,0 +1,33 @@
+public class Ejercicio11 {
+    public static int obtenerDecenas(int numero) {
+        return numero / 10;
+    }
+
+    public static int obtenerUnidades(int numero) {
+        return numero % 10;
+    }
+
+    public static String convertirUnidadesARomano(int unidades) {
+        String[] romanos = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        return romanos[unidades];
+    }
+
+    public static String convertirDecenasARomano(int decenas) {
+        String[] romanos = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        return romanos[decenas];
+    }
+
+    public static void main(String[] args) {
+        int numero = 42;
+        
+        if (numero > 0 && numero < 100) {
+            int decenas = obtenerDecenas(numero);
+            int unidades = obtenerUnidades(numero);
+            
+            String romano = convertirDecenasARomano(decenas) + convertirUnidadesARomano(unidades);
+            System.out.println("El número en romano es: " + romano);
+        } else {
+            System.out.println("Número fuera de rango");
+        }
+    }
+}
