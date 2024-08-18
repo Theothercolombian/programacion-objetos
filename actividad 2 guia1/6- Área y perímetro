@@ -1,0 +1,30 @@
+public class Ejercicio6 {
+    public static double areaRectangulo(double base, double altura) {
+        return base * altura;
+    }
+
+    public static double hipotenusa(double cateto1, double cateto2) {
+        return Math.sqrt(cateto1 * cateto1 + cateto2 * cateto2);
+    }
+
+    public static double areaTriangulo(double base, double altura) {
+        return (base * altura) / 2;
+    }
+
+    public static double perimetroTerreno(double ladoA, double ladoB, double ladoC) {
+        return ladoA + ladoB + hipotenusa(ladoB, ladoC);
+    }
+
+    public static void main(String[] args) {
+        double ladoA = 10;
+        double ladoB = 5;
+        double ladoC = 4;
+        
+        double areaRect = areaRectangulo(ladoA, ladoB);
+        double areaTriang = areaTriangulo(ladoB, ladoC);
+        double perimetro = perimetroTerreno(ladoA, ladoB, ladoC);
+        
+        System.out.println("Área del terreno: " + (areaRect + areaTriang));
+        System.out.println("Perímetro del terreno: " + perimetro);
+    }
+}
