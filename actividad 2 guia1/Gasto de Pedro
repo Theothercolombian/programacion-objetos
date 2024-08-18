@@ -1,0 +1,20 @@
+public class Ejercicio4 {
+    public static double gastoArriendo(double sueldo) {
+        return sueldo * 0.4;
+    }
+
+    public static double gastoComida(double sueldo) {
+        return sueldo * 0.15;
+    }
+
+    public static void main(String[] args) {
+        double sueldo = 1000.0;
+        double arriendo = gastoArriendo(sueldo);
+        double comida = gastoComida(sueldo);
+        double restante = sueldo - arriendo - comida;
+        
+        System.out.println("Gasto en arriendo: " + arriendo);
+        System.out.println("Gasto en comida: " + comida);
+        System.out.println("Dinero restante: " + restante);
+    }
+}
