@@ -1,0 +1,12 @@
+public class Ejercicio3 {
+    public static double calcularLongitudEscalera(double altura, double angulo) {
+        return altura / Math.sin(Math.toRadians(angulo));
+    }
+
+    public static void main(String[] args) {
+        double altura = 5;
+        double angulo = 30;
+        double longitud = calcularLongitudEscalera(altura, angulo);
+        System.out.println("La longitud de la escalera es: " + longitud);
+    }
+}
