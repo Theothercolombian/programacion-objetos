@@ -1,0 +1,12 @@
+public class Ejercicio1 {
+    public static int funcionAlgebraica(int x, int y) {
+        return x * x + 2 * x * y + y * y;
+    }
+
+    public static void main(String[] args) {
+        int x = 3;
+        int y = 4;
+        int resultado = funcionAlgebraica(x, y);
+        System.out.println("El resultado de la función es: " + resultado);
+    }
+}
