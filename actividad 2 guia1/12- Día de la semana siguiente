@@ -1,0 +1,18 @@
+public class Ejercicio12 {
+    public static String diaDeManana(String diaDeHoy) {
+        String[] dias = {"lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"};
+        for (int i = 0; i < dias.length; i++) {
+            if (dias[i].equalsIgnoreCase(diaDeHoy)) {
+                return dias[(i + 1) % 7];
+            }
+        }
+        return "Día no válido";
+    }
+
+    public static void main(String[] args) {
+        String diaDeHoy = "martes";
+        String diaDeManana = diaDeManana(diaDeHoy);
+        
+        System.out.println("Mañana será: " + diaDeManana);
+    }
+}
