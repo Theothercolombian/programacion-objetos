@@ -1,0 +1,30 @@
+public class Ejercicio10 {
+    public static double calcular(int num1, int num2, String operador) {
+        switch (operador) {
+            case "+":
+                return num1 + num2;
+            case "-":
+                return num1 - num2;
+            case "*":
+                return num1 * num2;
+            case "/":
+                return num1 / (double) num2;
+            case "%":
+                return num1 % num2;
+            case "**":
+                return Math.pow(num1, num2);
+            default:
+                throw new IllegalArgumentException("Operador no válido");
+        }
+    }
+
+    public static void main(String[] args) {
+        int num1 = 4;
+        int num2 = 2;
+        String operador = "+";
+        
+        double resultado = calcular(num1, num2, operador);
+        
+        System.out.println("El resultado es: " + resultado);
+    }
+}
