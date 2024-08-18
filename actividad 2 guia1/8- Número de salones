@@ -1,0 +1,21 @@
+public class Ejercicio8 {
+    public static int calcularSalones(int estudiantes, int capacidadSalon) {
+        return (int) Math.ceil((double) estudiantes / capacidadSalon);
+    }
+
+    public static int calcularPisos(int salones, int salonesPorPiso) {
+        return (int) Math.ceil((double) salones / salonesPorPiso);
+    }
+
+    public static void main(String[] args) {
+        int estudiantes = 300;
+        int capacidadSalon = 30;
+        int salonesPorPiso = 5;
+        
+        int salones = calcularSalones(estudiantes, capacidadSalon);
+        int pisos = calcularPisos(salones, salonesPorPiso);
+        
+        System.out.println("Número de salones necesarios: " + salones);
+        System.out.println("Número de pisos necesarios: " + pisos);
+    }
+}
