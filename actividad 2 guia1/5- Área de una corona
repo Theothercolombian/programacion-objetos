@@ -1,0 +1,17 @@
+public class Ejercicio5 {
+    public static double areaCirculo(double radio) {
+        return Math.PI * radio * radio;
+    }
+
+    public static double areaCoronaCircular(double radioMayor, double radioMenor) {
+        return areaCirculo(radioMayor) - areaCirculo(radioMenor);
+    }
+
+    public static void main(String[] args) {
+        double radioMayor = 10;
+        double radioMenor = 5;
+        double areaCorona = areaCoronaCircular(radioMayor, radioMenor);
+        
+        System.out.println("El área de la corona circular es: " + areaCorona);
+    }
+}
